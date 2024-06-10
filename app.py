@@ -108,6 +108,7 @@ if submit_button:
             )
             predictions = predict_wildfire(image)
             st.write(predictions)
+            st.write(new_model)
             if predictions is None:
                 st.error("Ошибка прогноза")
             else:
