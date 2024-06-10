@@ -35,11 +35,12 @@ def load_model_cache() -> tf.keras.Model:
         st.error(f"Error loading model: {e}")
         return None
 
-new_model: tf.keras.Model = load_model_cache()
+# new_model: tf.keras.Model = load_model_cache()
 
 
 def predict_wildfire(image: np.ndarray) -> np.ndarray | None:
     try:
+        new_model: tf.keras.Model = load_model(MODEL_PATH)
         img = cv2.resize(image, IMAGE_SIZE)
         img = img / IMAGE_NORMALIZATION
         img = img.reshape(1, *IMAGE_SIZE, IMAGE_CHANNELS)
