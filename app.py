@@ -32,7 +32,7 @@ def load_model_cache() -> tf.keras.Model:
     return load_model(MODEL_PATH)
 
 
-new_model: tf.keras.Model = load_model_cache()
+new_model: tf.keras.Model = load_model(MODEL_PATH)
 
 
 def predict_wildfire(image: np.ndarray) -> np.ndarray | None:
