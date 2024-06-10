@@ -110,6 +110,8 @@ if submit_button:
                 channels="RGB",
                 output_format="auto",
             )
+            with st.spinner('Одну секундочку...'):
+                time.sleep(1)
             predictions = predict_wildfire(image)
             if predictions is None:
                 st.error("Ошибка прогноза")
