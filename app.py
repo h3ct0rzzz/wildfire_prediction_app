@@ -27,13 +27,13 @@ st.header(PAGE_TITLE, divider="orange")
 st.caption("Для оценки местности - загрузите фото или выберите из списка")
 
 
-@st.cache
-def load_model_cache() -> tf.keras.Model:
-    try:
-        return load_model(MODEL_PATH)
-    except Exception as e:
-        st.error(f"Error loading model: {e}")
-        return None
+#@st.cache
+#def load_model_cache() -> tf.keras.Model:
+ #   try:
+ #       return load_model(MODEL_PATH)
+ #   except Exception as e:
+ #       st.error(f"Error loading model: {e}")
+ #       return None
 
 # new_model: tf.keras.Model = load_model_cache()
 
